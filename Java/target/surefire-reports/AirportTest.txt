@@ -1,4 +1,35 @@
 -------------------------------------------------------------------------------
 Test set: AirportTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.663 sec
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.473 sec <<< FAILURE!
+CorrectSortedPlanesByMaxLoadCapacityTest(AirportTest)  Time elapsed: 0.012 sec  <<< FAILURE!
+java.lang.AssertionError: did not expect to find [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at AirportTest.CorrectSortedPlanesByMaxLoadCapacityTest(AirportTest.java:53)
+
+airportHasAtLeastOneTransportMilitaryPlanesTest(AirportTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.ClassCastException: java.util.stream.ReferencePipeline$2 cannot be cast to java.util.List
+	at Airport.getTransportMilitaryPlanes(Airport.java:43)
+	at AirportTest.airportHasAtLeastOneTransportMilitaryPlanesTest(AirportTest.java:39)
+
+experimentalPlanesHasClassificationLevelHigherThanUnclassifiedTest(AirportTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: did not expect to find [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at AirportTest.experimentalPlanesHasClassificationLevelHigherThanUnclassifiedTest(AirportTest.java:65)
+
+getPassengerPlaneWithMaxCapacityTest(AirportTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.ClassCastException: java.util.stream.SliceOps$1 cannot be cast to plane.PassengerPlane
+	at Airport.getPassengerPlaneWithMaxPassengersCapacity(Airport.java:38)
+	at AirportTest.getPassengerPlaneWithMaxCapacityTest(AirportTest.java:45)
+
+hasAtLeastOneBomberInMilitaryPlanesTest(AirportTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.ClassCastException: java.util.stream.ReferencePipeline$2 cannot be cast to java.util.List
+	at Airport.getTransportMilitaryPlanes(Airport.java:43)
+	at AirportTest.hasAtLeastOneBomberInMilitaryPlanesTest(AirportTest.java:59)
+

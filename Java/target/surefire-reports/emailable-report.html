@@ -9,14 +9,27 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">AirportTest</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">53</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Command line test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">5</td><td class="num">45</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">AirportTest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">AirportTest</td><td><a href="#m0">test3</a></td><td rowspan="1">1603788460385</td><td rowspan="1">9</td></tr><tr class="passedeven"><td><a href="#m1">testExperimentalPlanesHasClassificationLevelHigherThanUnclassified</a></td><td rowspan="1">1603788460394</td><td rowspan="1">3</td></tr><tr class="passedeven"><td><a href="#m2">testGetPassengerPlaneWithMaxCapacity</a></td><td rowspan="1">1603788460397</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m3">testGetTransportMilitaryPlanes</a></td><td rowspan="1">1603788460398</td><td rowspan="1">0</td></tr><tr class="passedeven"><td><a href="#m4">testHasAtLeastOneBomberInMilitaryPlanes</a></td><td rowspan="1">1603788460399</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">AirportTest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="5">AirportTest</td><td><a href="#m0">CorrectSortedPlanesByMaxLoadCapacityTest</a></td><td rowspan="1">1603802894935</td><td rowspan="1">9</td></tr><tr class="failedeven"><td><a href="#m1">airportHasAtLeastOneTransportMilitaryPlanesTest</a></td><td rowspan="1">1603802894947</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m2">experimentalPlanesHasClassificationLevelHigherThanUnclassifiedTest</a></td><td rowspan="1">1603802894949</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m3">getPassengerPlaneWithMaxCapacityTest</a></td><td rowspan="1">1603802894951</td><td rowspan="1">2</td></tr><tr class="failedeven"><td><a href="#m4">hasAtLeastOneBomberInMilitaryPlanesTest</a></td><td rowspan="1">1603802894954</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Command line test</h2><h3 id="m0">AirportTest#test3</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">AirportTest#testExperimentalPlanesHasClassificationLevelHigherThanUnclassified</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">AirportTest#testGetPassengerPlaneWithMaxCapacity</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">AirportTest#testGetTransportMilitaryPlanes</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">AirportTest#testHasAtLeastOneBomberInMilitaryPlanes</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Command line test</h2><h3 id="m0">AirportTest#CorrectSortedPlanesByMaxLoadCapacityTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: did not expect to find [true] but found [false]
+	at AirportTest.CorrectSortedPlanesByMaxLoadCapacityTest(AirportTest.java:53)
+... Removed 38 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">AirportTest#airportHasAtLeastOneTransportMilitaryPlanesTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ClassCastException: java.util.stream.ReferencePipeline$2 cannot be cast to java.util.List
+	at Airport.getTransportMilitaryPlanes(Airport.java:43)
+	at AirportTest.airportHasAtLeastOneTransportMilitaryPlanesTest(AirportTest.java:39)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">AirportTest#experimentalPlanesHasClassificationLevelHigherThanUnclassifiedTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: did not expect to find [true] but found [false]
+	at AirportTest.experimentalPlanesHasClassificationLevelHigherThanUnclassifiedTest(AirportTest.java:65)
+... Removed 38 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">AirportTest#getPassengerPlaneWithMaxCapacityTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ClassCastException: java.util.stream.SliceOps$1 cannot be cast to plane.PassengerPlane
+	at Airport.getPassengerPlaneWithMaxPassengersCapacity(Airport.java:38)
+	at AirportTest.getPassengerPlaneWithMaxCapacityTest(AirportTest.java:45)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">AirportTest#hasAtLeastOneBomberInMilitaryPlanesTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ClassCastException: java.util.stream.ReferencePipeline$2 cannot be cast to java.util.List
+	at Airport.getTransportMilitaryPlanes(Airport.java:43)
+	at AirportTest.hasAtLeastOneBomberInMilitaryPlanesTest(AirportTest.java:59)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

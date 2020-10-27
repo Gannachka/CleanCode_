@@ -1,40 +1,37 @@
-package Planes;
+package plane;
 
-import models.MilitaryType;
+import model.MilitaryTypes;
 
 import java.util.Objects;
 
 public class MilitaryPlane extends Plane{
 
-    private MilitaryType type;
+    private MilitaryTypes militaryType;
 
-    public MilitaryPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type) {
+    public MilitaryPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryTypes type) {
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
-        this.type = type;
+        this.militaryType = type;
     }
 
-    public MilitaryType getType() {
-        return type;
+    public MilitaryTypes getType() {
+        return militaryType;
     }
 
     @Override
     public String toString() {
-        return super.toString().replace("}",
-                ", type=" + type +
-                '}');
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof MilitaryPlane)) return false;
-        if (!super.equals(o)) return false;
-        MilitaryPlane that = (MilitaryPlane) o;
-        return type == that.type;
+        StringBuilder stringBuilder=new StringBuilder(super.toString());
+        stringBuilder.replace(stringBuilder.indexOf("}"),stringBuilder.indexOf("}")+1,", type=" + militaryType + '}');
+        return stringBuilder.toString();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), type);
+        return Objects.hash(super.hashCode(), militaryType);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return this==o || (o instanceof MilitaryPlane) || super.equals(o) ||
+                militaryType==((MilitaryPlane) o).militaryType;
     }
 }

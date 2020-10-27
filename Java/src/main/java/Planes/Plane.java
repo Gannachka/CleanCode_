@@ -1,9 +1,9 @@
-package Planes;
+package plane;
 
 import java.util.Objects;
 
-abstract public class Plane {
-    String model;
+public abstract class Plane {
+    private String model;
     private int maxSpeed;
     private int maxFlightDistance;
     private int maxLoadCapacity;
@@ -19,42 +19,37 @@ abstract public class Plane {
         return model;
     }
 
-    public int getMS() {
+    public int getMaxSpeed() {
         return maxSpeed;
     }
 
-    public int Get_Max_Flight_Distance() {
+    public int getMaxFlightDistance() {
         return maxFlightDistance;
     }
 
-    public int getMinLoadCapacity() {
-        int result = this.maxLoadCapacity;
-        return result;
+    public int getMaxLoadCapacity() {
+        return maxLoadCapacity;
     }
 
     @Override
     public String toString() {
-        return "Plane{" +
-                "model='" + model + '\'' +
-                ", maxSpeed=" + maxSpeed +
-                ", maxFlightDistance=" + maxFlightDistance +
-                ", maxLoadCapacity=" + maxLoadCapacity +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Plane)) return false;
-        Plane plane = (Plane) o;
-        return maxSpeed == plane.maxSpeed &&
-                maxFlightDistance == plane.maxFlightDistance &&
-                maxLoadCapacity == plane.maxLoadCapacity &&
-                Objects.equals(model, plane.model);
+        StringBuilder stringBuilder=new StringBuilder();
+        stringBuilder.append("Plane{").append("model='").append(model).append('\'').append(", maxSpeed=").append(maxSpeed)
+                .append(", maxFlightDistance=").append(maxFlightDistance).append(", maxLoadCapacity=").append(maxLoadCapacity)
+                .append('}');
+        return stringBuilder.toString();
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return (this ==o) || (o instanceof Plane) || (maxSpeed == ((Plane) o).maxSpeed &&
+                maxFlightDistance == ((Plane) o).maxFlightDistance &&
+                maxLoadCapacity == ((Plane) o).maxLoadCapacity &&
+                Objects.equals(model, ((Plane) o).model));
     }
 }
