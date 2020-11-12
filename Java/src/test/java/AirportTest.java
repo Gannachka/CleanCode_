@@ -45,13 +45,4 @@ public class AirportTest {
         Assert.assertTrue(new Airport(planes).getPassengerPlaneWithMaxPassengersCapacity()
                 .equals(planeWithMaxPassengerCapacity));
     }
-
-//    @Test
-//    public void CorrectSortedPlanesByMaxLoadCapacityTest() {
-//        Airport airport = new Airport(planes);
-//        airport.setPlanes(airport.sortByMaxLoadCapacity());
-//        Assert.assertTrue(airport.getPlanes().stream().equals(airport.getPlanes().stream()
-//                .sorted(Comparator.comparingInt(Plane::getMaxLoadCapacity))));
-//    }
-
 }
